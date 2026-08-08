@@ -790,6 +790,30 @@ section,
   align-items: center;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at top left, rgba(38, 91, 107, 0.28), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at top right, rgba(41, 107, 78, 0.42), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* Contenido */
 .hero-container {
   position: relative;

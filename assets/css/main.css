@@ -12,9 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -823,7 +823,7 @@ section,
 /* Título */
 .hero h1 {
   margin-bottom: 24px;
-  font-size: 46px;
+  font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
   color: var(--heading-color);
@@ -844,7 +844,7 @@ section,
 /* Imagen */
 .hero .hero-img {
   width: 100%;
-  max-width: 88%;
+  max-width: 95%;
   margin-left: -20px;
   margin-top: -30px;
   height: auto;
@@ -905,7 +905,7 @@ section,
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .hero .hero-img {
@@ -1075,6 +1075,142 @@ section,
 
 .about .about-images img {
   border-radius: 10px;
+}
+
+.about {
+  padding: 30px 0 50px;
+  background: linear-gradient(120deg, #ffffff 0%, rgba(41, 107, 78, 0.45) 100%);
+}
+
+.about .about-text {
+  margin-bottom: 28px;
+  color: var(--default-color);
+}
+
+.about .about-team {
+  text-align: center;
+  margin: 50px 0 40px;
+}
+
+.about .about-team-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #118F4F;
+  margin-bottom: 10px;
+}
+
+.about .about-team-tagline {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0;
+}
+
+.about .about-text-center {
+  max-width: 720px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.about .team-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.about .team-card-photo {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid rgba(17, 143, 79, 0.3);
+  background: rgba(17, 143, 79, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.about .team-card-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about .team-card-info {
+  min-width: 0;
+  text-align: center;
+}
+
+.about .team-card-info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--heading-color);
+}
+
+.about .team-card-cargo {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 6px;
+  font-family: var(--heading-font);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #118F4F;
+  background: rgba(17, 143, 79, 0.1);
+  padding: 4px 14px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.about .team-card-rol {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.about .team-card-desc {
+  font-size: 13px;
+  color: var(--default-color);
+  margin-bottom: 14px;
+}
+
+.about .team-card-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.about .team-card-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(17, 143, 79, 0.1);
+  color: #118F4F;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.about .team-card-social a:hover {
+  background: #118F4F;
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
 /*--------------------------------------------------------------

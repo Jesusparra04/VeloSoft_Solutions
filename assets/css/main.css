@@ -651,6 +651,35 @@ h6 {
   opacity: 1;
 }
 
+/* WhatsApp Float */
+.wa-float {
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+  z-index: 99999;
+  background-color: #118F4F;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.wa-float i {
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 0;
+}
+
+.wa-float:hover {
+  background-color: #0e7a40;
+  transform: translateY(-3px);
+}
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/

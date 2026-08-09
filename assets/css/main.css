@@ -1100,7 +1100,7 @@ section,
 }
 
 .about .about-team-tagline {
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 600;
   color: var(--heading-color);
   margin-bottom: 0;
@@ -1278,10 +1278,16 @@ section,
 .services .section-title h2 {
   font-size: 28px;
   color: #118F4F;
+  padding-bottom: 0;
+}
+
+.services .section-title h2:before,
+.services .section-title h2::after {
+  display: none;
 }
 
 .services .services-tagline {
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 600;
   color: var(--heading-color);
   margin-bottom: 0;
@@ -1432,6 +1438,27 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio {
+  background: linear-gradient(120deg, #ffffff 0%, rgba(41, 107, 78, 0.45) 100%);
+}
+
+.portfolio .section-title h2 {
+  font-size: 28px;
+  color: #118F4F;
+  padding-bottom: 0;
+}
+
+.portfolio .section-title h2:before,
+.portfolio .section-title h2::after {
+  display: none;
+}
+
+.portfolio .portfolio-tagline {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0;
+}
 
 .portfolio .portfolio-item img {
   height: 300px;
@@ -1861,6 +1888,64 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at top left, rgba(38, 91, 107, 0.28), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at top right, rgba(41, 107, 78, 0.42), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact .section-title {
+  position: relative;
+  z-index: 3;
+}
+
+.contact .section-title h2 {
+  font-size: 28px;
+  color: #118F4F;
+  padding-bottom: 0;
+}
+
+.contact .section-title h2:before,
+.contact .section-title h2::after {
+  display: none;
+}
+
+.contact .contact-tagline {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0;
+}
+
+.contact .container {
+  position: relative;
+  z-index: 3;
+}
+
 .contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
@@ -1881,7 +1966,31 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.contact .contact-social {
+  gap: 12px;
+}
+
+.contact .contact-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(17, 143, 79, 0.1);
+  color: #118F4F;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.contact .contact-social a:hover {
+  background: #118F4F;
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
 @media (min-width: 992px) {

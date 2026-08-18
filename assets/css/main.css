@@ -2790,3 +2790,588 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# VeloSoft Custom - Service Pages Redesign
+--------------------------------------------------------------*/
+
+/* Service Hero */
+.vs-service-hero {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+}
+
+.vs-service-hero h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--heading-color);
+}
+
+.vs-service-hero h2 span {
+  color: var(--accent-color);
+}
+
+.vs-service-hero p {
+  font-size: 18px;
+  color: var(--default-color);
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.vs-service-hero .vs-feature-grid {
+  text-align: left;
+}
+
+.vs-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.vs-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading-color);
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.vs-service-tag i {
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+.vs-service-tag:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(24, 210, 110, 0.15);
+}
+
+/* Service Feature Grid */
+.vs-features-section {
+  padding: 80px 0;
+}
+
+.vs-features-section .section-title-custom {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vs-features-section .section-title-custom h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vs-features-section .section-title-custom p {
+  font-size: 16px;
+  color: var(--default-color);
+}
+
+.vs-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.vs-feature-grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vs-feature-block {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-top: 3px solid var(--accent-color);
+  border-radius: 16px;
+  padding: 40px 35px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vs-feature-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(180deg, rgba(24, 210, 110, 0.06) 0%, transparent 100%);
+  transition: height 0.4s ease;
+}
+
+.vs-feature-block:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(24, 210, 110, 0.1);
+}
+
+.vs-feature-block:hover::before {
+  height: 100%;
+}
+
+.vs-feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.vs-feature-block:hover .vs-feature-icon {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.vs-feature-block h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.vs-feature-block p {
+  font-size: 15px;
+  color: var(--default-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Timeline Process */
+.vs-timeline-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.vs-timeline-section .section-title-custom {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vs-timeline-section .section-title-custom h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vs-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.vs-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-color), #c8e6c9);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.vs-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.vs-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.vs-timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 3px var(--accent-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.vs-timeline-content {
+  width: 45%;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.vs-timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vs-timeline-item:nth-child(odd) .vs-timeline-content {
+  margin-right: auto;
+}
+
+.vs-timeline-item:nth-child(even) .vs-timeline-content {
+  margin-left: auto;
+}
+
+.vs-timeline-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-color);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vs-timeline-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.vs-timeline-content p {
+  font-size: 14px;
+  color: var(--default-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pricing Section */
+.vs-pricing-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.vs-pricing-section .section-title-custom {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vs-pricing-section .section-title-custom h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vs-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.vs-pricing-card {
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.vs-pricing-card.featured {
+  border-color: var(--accent-color);
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(24, 210, 110, 0.15);
+}
+
+.vs-pricing-card.featured::before {
+  content: 'Popular';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: #ffffff;
+  padding: 6px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vs-pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(24, 210, 110, 0.2);
+  border-color: var(--accent-color);
+}
+
+.vs-pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.vs-pricing-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.vs-pricing-card .vs-price {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.vs-pricing-card .vs-price small {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--default-color);
+}
+
+.vs-pricing-card .vs-price-note {
+  font-size: 13px;
+  color: var(--default-color);
+  margin-bottom: 30px;
+}
+
+.vs-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.vs-pricing-features li {
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.vs-pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.vs-pricing-features li i.bi-check-circle {
+  color: var(--accent-color);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vs-pricing-features li i.bi-x-circle {
+  color: #ccc;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vs-pricing-features li.disabled {
+  color: #bbb;
+}
+
+.vs-pricing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+}
+
+.vs-pricing-btn:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.vs-pricing-card.featured .vs-pricing-btn {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.vs-pricing-card.featured .vs-pricing-btn:hover {
+  background: #0e7a40;
+  border-color: #0e7a40;
+}
+
+/* Maintenance Banner */
+.vs-maintenance-banner {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+}
+
+.vs-maintenance-banner .row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.vs-maintenance-info h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.vs-maintenance-info p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vs-maintenance-price {
+  text-align: center;
+}
+
+.vs-maintenance-price .price-big {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.vs-maintenance-price .price-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Service CTA Final */
+.vs-cta-section {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+}
+
+.vs-cta-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.vs-cta-section p {
+  font-size: 16px;
+  color: var(--default-color);
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.vs-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-color);
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.vs-cta-btn:hover {
+  background: #0e7a40;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(24, 210, 110, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .vs-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-feature-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .vs-pricing-card.featured {
+    transform: none;
+  }
+
+  .vs-pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
+
+  .vs-timeline::before {
+    left: 20px;
+  }
+
+  .vs-timeline-dot {
+    left: 20px;
+  }
+
+  .vs-timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 50px !important;
+    margin-right: 0 !important;
+  }
+
+  .vs-maintenance-banner .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .vs-service-hero h2 {
+    font-size: 28px;
+  }
+
+  .vs-service-hero p {
+    font-size: 16px;
+  }
+
+  .vs-service-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vs-feature-block {
+    padding: 30px 25px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  .vs-feature-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

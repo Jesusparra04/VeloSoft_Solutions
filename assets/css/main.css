@@ -3421,3 +3421,423 @@ section,
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* =========================================
+   POS SECTION
+   ========================================= */
+
+:root {
+  --vs-green: #18d26e;
+  --vs-green-dark: #15a35a;
+  --vs-green-light: #e8f9f0;
+  --vs-purple: #9b6dff;
+  --vs-purple-light: #f3e8ff;
+}
+
+/* --- HERO --- */
+.vs-pos-hero {
+  background: #0d1117;
+  padding: 140px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vs-pos-hero-bg-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(24, 210, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 210, 110, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.vs-pos-badge {
+  display: inline-block;
+  border: 1.5px solid var(--vs-green);
+  color: var(--vs-green);
+  background: rgba(24, 210, 110, 0.06);
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+}
+
+.vs-pos-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.vs-pos-hero h1 span {
+  color: var(--vs-green);
+}
+
+.vs-pos-hero p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* --- PRODUCTS SECTION --- */
+.vs-pos-products {
+  padding: 120px 0 80px;
+  background: #f8f9fa;
+}
+
+.vs-pos-products .container {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* --- CARD --- */
+.vs-pos-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vs-pos-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(24, 210, 110, 0.15);
+  border-color: var(--vs-green);
+}
+
+/* --- CARD HEADER --- */
+.vs-pos-card-header {
+  display: flex;
+  align-items: stretch;
+  min-height: 260px;
+}
+
+.vs-pos-card-info {
+  flex: 1;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vs-pos-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--vs-green-light);
+  color: var(--vs-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.vs-pos-card-info h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.vs-pos-card-info h2 span {
+  color: var(--vs-green);
+}
+
+.vs-pos-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--vs-green);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.vs-pos-card-info p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vs-pos-card-image {
+  width: 42%;
+  min-height: 220px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.vs-pos-card-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* --- CARD BODY --- */
+.vs-pos-card-body {
+  padding: 0 32px 32px;
+}
+
+/* --- FEATURES --- */
+.vs-pos-features h3,
+.vs-pos-hardware h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vs-pos-features h3 i,
+.vs-pos-hardware h3 i {
+  color: var(--vs-green);
+  font-size: 16px;
+}
+
+.vs-pos-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+
+.vs-pos-features ul li {
+  font-size: 13.5px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.vs-pos-features ul li i {
+  color: var(--vs-green);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* --- HARDWARE --- */
+.vs-pos-hardware-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.vs-pos-hw-item {
+  text-align: center;
+}
+
+.vs-pos-hw-img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: var(--vs-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.vs-pos-hw-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vs-pos-hw-item > span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* --- CARD FOOTER --- */
+.vs-pos-card-footer {
+  padding: 0 32px 32px;
+  text-align: center;
+}
+
+.vs-pos-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.vs-pos-btn i {
+  transition: transform 0.3s ease;
+}
+
+.vs-pos-btn:hover i {
+  transform: translateX(4px);
+}
+
+.vs-pos-btn-green {
+  border-color: var(--vs-green);
+  color: var(--vs-green);
+  background: #ffffff;
+}
+
+.vs-pos-btn-green:hover {
+  background: var(--vs-green);
+  color: #ffffff;
+}
+
+/* --- CTA --- */
+.vs-pos-cta {
+  padding: 0;
+}
+
+.vs-pos-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--vs-green-light);
+  border-radius: 16px;
+  padding: 36px 44px;
+}
+
+.vs-pos-cta-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--vs-green);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.vs-pos-cta-text {
+  flex: 1;
+}
+
+.vs-pos-cta-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.vs-pos-cta-text p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.vs-pos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--vs-green);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.vs-pos-cta-btn:hover {
+  background: var(--vs-green-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(24, 210, 110, 0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .vs-pos-products .container {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+
+  .vs-pos-card-header {
+    flex-direction: column;
+  }
+
+  .vs-pos-card-image {
+    width: 100%;
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .vs-pos-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 28px;
+  }
+
+  .vs-pos-cta-text h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vs-pos-hero {
+    padding: 120px 0 60px;
+  }
+
+  .vs-pos-hero h1 {
+    font-size: 28px;
+  }
+
+  .vs-pos-hero p {
+    font-size: 15px;
+  }
+
+  .vs-pos-card-info {
+    padding: 32px 28px;
+  }
+
+  .vs-pos-card-body {
+    padding: 0 24px 24px;
+  }
+
+  .vs-pos-card-footer {
+    padding: 0 24px 24px;
+  }
+
+  .vs-pos-features ul {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-pos-hardware-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

@@ -3713,44 +3713,27 @@ section,
 
 /* --- CTA --- */
 .vs-pos-cta {
-  padding: 0;
-}
-
-.vs-pos-cta-inner {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+  padding: 60px 0;
   background: var(--vs-green-light);
-  border-radius: 16px;
-  padding: 36px 44px;
 }
 
-.vs-pos-cta-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--vs-green);
-  color: #ffffff;
+.vs-pos-cta .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  flex-shrink: 0;
+  text-align: center;
+  gap: 16px;
 }
 
-.vs-pos-cta-text {
-  flex: 1;
-}
-
-.vs-pos-cta-text h3 {
-  font-size: 20px;
-  font-weight: 700;
+.vs-pos-cta h3 {
+  font-size: 28px;
+  font-weight: 800;
   color: #1a1a2e;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
-.vs-pos-cta-text p {
-  font-size: 14px;
+.vs-pos-cta p {
+  font-size: 16px;
   color: #6b7280;
   margin: 0;
   line-height: 1.5;
@@ -3779,6 +3762,15 @@ section,
   box-shadow: 0 8px 24px rgba(24, 210, 110, 0.3);
 }
 
+.vs-pos-cta-btn i {
+  transition: transform 0.3s ease;
+}
+
+.vs-pos-cta-btn:hover i {
+  transform: translateX(4px);
+}
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
   .vs-pos-products .container {
@@ -3796,14 +3788,8 @@ section,
     max-height: 240px;
   }
 
-  .vs-pos-cta-inner {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 28px;
-  }
-
-  .vs-pos-cta-text h3 {
-    font-size: 18px;
+  .vs-pos-cta h3 {
+    font-size: 22px;
   }
 }
 
